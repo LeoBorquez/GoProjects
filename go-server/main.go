@@ -13,11 +13,10 @@ func main() {
 	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
 
-	fmt.Printf("Starting server at port\n")
+	fmt.Printf("Starting server at port :8080\n")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Done")
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
